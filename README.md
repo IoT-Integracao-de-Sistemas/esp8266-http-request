@@ -1,22 +1,20 @@
-# Realizando requisições HTTP no ESP8266 utilizando a biblioteca HTTPClient
+# Realizando requisições HTTP desde um ESP8266 utilizando a biblioteca HTTPClient
 
 ![img](https://raw.githubusercontent.com/IoT-Integracao-de-Sistemas/esp8266-http-request/master/files/esp8266-request.png)
 
 ## Introdução
 
-Certamente você já precisou recuperar algum dado de um servidor, ou até mesmo enviar algum dado para o mesmo a partir do seu embarcado - neste caso estamos nos referindo ao nosso querido ESP8266.
+Certamente você já precisou recuperar algum dado de um servidor, ou até mesmo enviar algum dado para o mesmo a partir do seu embarcado - neste caso, um ESP8266.
 
-Portanto, neste artigo, será abordado um pequeno cenário de como utilizar o protocolo HTTP para recuperação/envio de dados ao servidor. 
+Portanto, neste artigo, será abordado um caso de uso de como utilizar o protocolo HTTP para recuperação/envio de dados ao servidor, utilizando o ESP8266 como cliente. 
 
 ## HTTP(Hypertext Transfer Protocol)
 
-O famoso protocolo HTTP. Quem nunca usou?.
-
-Um protocolo baseado na arquitetura cliente/servidor, amplamente utilizado no nosso dia a dia - creio que grande parte das comunicações hoje em dia, usufruem do http.
+De forma resumida, o HTTP trata-se de um protocolo baseado na arquitetura cliente/servidor ou requisição/resposta. Em uma arquitetura onde é usado o HTTP o cliente realizada uma requisição, por meio de um verbo, e o servidor retorna uma resposta, contendo um código de estado e o recurso de resposta.
 
 ### Verbos HTTP(mais utilizados - principalmente em API's)
 
-O HTTP disponha de um conjunto de verbos http, então sem muitas delongas, fica abaixo os mais comuns e utilizados hoje nas comunicações:
+O HTTP implementa um conjunto de verbos que definem o comportamento esperado quando da sua utilização:
 
 | Verbo | descrição |
 | --- | --- |
@@ -287,10 +285,6 @@ Todos exemplos que foram testados na construção deste artigo estarão no repos
 * [POST](https://github.com/IoT-Integracao-de-Sistemas/esp8266-http-request/blob/master/esp8266/post.ino);
 * [GET by id - busca por ID](https://github.com/IoT-Integracao-de-Sistemas/esp8266-http-request/blob/master/esp8266/get-by-id.ino);
 * [DELETE](https://github.com/IoT-Integracao-de-Sistemas/esp8266-http-request/blob/master/esp8266/delete.ino);
-
-Deu para perceber o quão simples fica realizar requisições http a partir do esp? Eu particularmente curti bastante - eu nunca havia utilizado esta lib :P.
-
-Os próximos passos será testar mais a biblioteca e também realizar o parser do JSON retornado pelo servidor utilizando a lib **ArduinoJSON**. Assim, dando alguma utilidade de fato ao contexto de determinado projeto.
 
 ## Referências
 
